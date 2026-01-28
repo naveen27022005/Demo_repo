@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Resume Builder - Interface</title>
+
+<style>
+body{
+    margin:0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(to right, #667eea, #764ba2);
+}
+
+/* Top Bar */
+.header{
+    background:#ffffff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+.header h2{
+    margin:0;
+    color:#4a4a4a;
+}
+.header button{
+    padding:8px 15px;
+    background:#667eea;
+    color:white;
+    border:none;
+    border-radius:20px;
+}
+
+/* Main Layout */
+.main{
+    display:flex;
+    padding:30px;
+}
+
+/* Left Panel */
+.form-panel{
+    width:40%;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-right:20px;
+}
+.form-panel h3{
+    color:#333;
+}
+label{
+    font-size:14px;
+    font-weight:600;
+}
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:8px 0 15px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+.generate-btn{
+    width:100%;
+    padding:12px;
+    background:#764ba2;
+    color:white;
+    border:none;
+    border-radius:25px;
+    font-size:16px;
+}
+
+/* Right Panel */
+.preview-panel{
+    width:60%;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+}
+.preview-panel h1{
+    margin-bottom:5px;
+    color:#333;
+}
+.preview-panel h4{
+    color:#666;
+    margin-top:0;
+}
+.section{
+    margin-top:20px;
+}
+.section h3{
+    color:#764ba2;
+    border-bottom:2px solid #eee;
+}
+.footer{
+    text-align:center;
+    color:white;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h2>AI Resume & Portfolio Builder</h2>
+    <button>Login</button>
+</div>
+
+<div class="main">
+
+    <!-- LEFT SIDE FORM -->
+    <div class="form-panel">
+        <h3>Enter Your Details</h3>
+
+        <label>Full Name</label>
+        <input type="text" placeholder="Your Name">
+
+        <label>Email</label>
+        <input type="email" placeholder="your@email.com">
+
+        <label>Education</label>
+        <textarea placeholder="BE ECE - SNS College of Technology"></textarea>
+
+        <label>Skills</label>
+        <textarea placeholder="Python, AI, HTML, Communication"></textarea>
+
+        <label>Projects</label>
+        <textarea placeholder="AI Study Buddy, Resume Builder"></textarea>
+
+        <label>Career Objective</label>
+        <textarea placeholder="To secure a challenging position..."></textarea>
+
+        <button class="generate-btn">Generate Resume</button>
+    </div>
+
+    <!-- RIGHT SIDE PREVIEW -->
+    <div class="preview-panel">
+        <h1>Your Name</h1>
+        <h4>your@email.com</h4>
+
+        <div class="section">
+            <h3>Career Objective</h3>
+            <p>To obtain a challenging role where I can apply my skills and grow professionally.</p>
+        </div>
+
+        <div class="section">
+            <h3>Education</h3>
+            <p>BE – Electronics and Communication Engineering</p>
+        </div>
+
+        <div class="section">
+            <h3>Skills</h3>
+            <p>Python, AI, HTML, CSS, Communication</p>
+        </div>
+
+        <div class="section">
+            <h3>Projects</h3>
+            <p>AI Resume Builder, Fake News Detector</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>Developed by Preethick | AI Mini Project</p>
+</div>
+
+</body>
+</html>

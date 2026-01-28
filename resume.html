@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Resume & Portfolio Builder</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#eef2f3;
+    margin:0;
+}
+header{
+    background:#1f3c88;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+.container{
+    width:80%;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+button{
+    background:#1f3c88;
+    color:white;
+    padding:10px 15px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+button:hover{
+    background:#163172;
+}
+.resume{
+    display:none;
+    margin-top:30px;
+    border-top:2px solid #1f3c88;
+    padding-top:20px;
+}
+footer{
+    background:#1f3c88;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>AI Resume & Portfolio Builder</h1>
+    <p>Create Professional Resume Easily</p>
+</header>
+
+<div class="container">
+    <h2>Enter Your Details</h2>
+
+    <label>Name</label>
+    <input type="text" id="name">
+
+    <label>Email</label>
+    <input type="email" id="email">
+
+    <label>Education</label>
+    <textarea id="education"></textarea>
+
+    <label>Skills</label>
+    <textarea id="skills" placeholder="Python, AI, Communication"></textarea>
+
+    <label>Projects</label>
+    <textarea id="projects"></textarea>
+
+    <label>Career Objective</label>
+    <textarea id="objective"></textarea>
+
+    <button onclick="generate()">Generate Resume</button>
+
+    <div class="resume" id="resume">
+        <h2 id="r_name"></h2>
+        <p><b>Email:</b> <span id="r_email"></span></p>
+
+        <h3>Career Objective</h3>
+        <p id="r_objective"></p>
+
+        <h3>Education</h3>
+        <p id="r_education"></p>
+
+        <h3>Skills</h3>
+        <p id="r_skills"></p>
+
+        <h3>Projects</h3>
+        <p id="r_projects"></p>
+    </div>
+</div>
+
+<footer>
+    <p>Developed by Preethick | AI Mini Project</p>
+</footer>
+
+<script>
+function generate(){
+    document.getElementById("r_name").innerText =
+        document.getElementById("name").value;
+
+    document.getElementById("r_email").innerText =
+        document.getElementById("email").value;
+
+    document.getElementById("r_education").innerText =
+        document.getElementById("education").value;
+
+    document.getElementById("r_skills").innerText =
+        document.getElementById("skills").value;
+
+    document.getElementById("r_projects").innerText =
+        document.getElementById("projects").value;
+
+    document.getElementById("r_objective").innerText =
+        document.getElementById("objective").value;
+
+    document.getElementById("resume").style.display = "block";
+}
+</script>
+
+</body>
+</html>
